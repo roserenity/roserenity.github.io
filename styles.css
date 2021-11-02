@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+header {
+    padding: 2%;
+    position: relative;
+    z-index: 2;
+    font-size: large;
+}
+
+header > #header_right {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+header > #header_left {
+    float:left
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    margin: 1%
+}
+
+.button{ 
+    background-color: #000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: large;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.button:hover, .button:focus , a:hover {
+    font-weight: bolder;
+}
+
+
+
+#category_div {
+    margin: 1%;
+}
+
+body {
+    background-color: #000;
+    color: #fff
+}
+
+#front_page_posters, #home_page_posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-between;
+}
+
+#home_page_posters {
+    padding-bottom: 10vh;
+}
+
+ #front_page_posters {
+    height: 80vh;
+    overflow-y: hidden;
+}
+
+img {
+    margin:1%
+}
+
+body > #overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index:2;
+}
+
+#title_div {
+    position: absolute;
+    z-index:2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+}
+
+#title {
+    font-family: 'Henny Penny', sans-serif;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: maroon;
+    z-index: 2;
+}

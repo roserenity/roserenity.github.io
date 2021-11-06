@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+.work-color {
+  background: #ff8c66;
+  border-radius: 15px;
+}
+
+.play-color {
+  background: #56c2e6;
+  border-radius: 15px;
+}
+
+.study-color {
+  background: #ff5c7c;
+  border-radius: 15px;
+}
+
+.exercise-color {
+  background: #4acf81;
+  border-radius: 15px;
+}
+
+.social-color {
+  background: #7536d3;
+  border-radius: 15px;
+}
+
+.self-care-color {
+  background: #f1c65b;
+  border-radius: 15px;
+}
+
+.font-small {
+  font-size: 12px;
+}
+
+body {
+  background: #0f1424;
+  font-family: "Rubik", sans-serif;
+  padding: 5%;
+}
+@media screen and (max-width: 405px) {
+  body {
+    padding: 3%;
+  }
+}
+@media screen and (max-width: 320px) {
+  body #user-div {
+    width: 70vw;
+    margin: auto;
+  }
+  body #user-info-div, body #period-nav-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body img {
+    width: 15vw;
+    margin: 0;
+  }
+  body .font-small {
+    font-size: 10px;
+  }
+  body #name {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 375px) and (min-width: 330px) {
+  body #user-div {
+    width: 74vw;
+    margin: auto;
+  }
+  body #user-info-div, body #period-nav-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body img {
+    width: 13vw;
+    margin: 0;
+  }
+  body .font-small {
+    font-size: 13px;
+  }
+  body #name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 425px) and (min-width: 380px) {
+  body #user-div {
+    width: 75vw;
+    margin: auto;
+  }
+  body #user-info-div, body #period-nav-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body img {
+    width: 18vw;
+    margin: 0;
+  }
+  body .period {
+    margin: 0;
+  }
+  body .font-small {
+    font-size: 13px;
+  }
+  body #name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 430px) {
+  body #user-div {
+    width: 50vw;
+    margin: auto;
+  }
+  body #user-info-div, body #period-nav-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .period {
+    margin-top: 0;
+  }
+  body img {
+    width: 10vw;
+    border-radius: 70px;
+    margin: 0;
+  }
+  body .font-small {
+    font-size: 15px;
+  }
+  body #name {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 778px) {
+  body img {
+    width: 5vw;
+    border-radius: 60px;
+  }
+  body .font-small {
+    font-size: 10px;
+  }
+  body #name {
+    font-size: 20px;
+  }
+}
+
+#user-info-div {
+  background-color: #5847eb;
+  color: white;
+  font-weight: 300;
+  border-radius: 15px;
+  margin: 0;
+  padding: 23px;
+}
+
+#name {
+  font-size: 30px;
+}
+
+.in-dark-blue {
+  background-color: #1c1f4a;
+}
+
+#user-div {
+  color: #6f76c8;
+  width: 15vw;
+  border-radius: 15px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+#period-nav-div {
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 23px;
+}
+
+.period {
+  padding-bottom: 15px;
+}
+
+#user-info-div > img {
+  border: 3px solid white;
+  border-radius: 50px;
+  margin-bottom: 10%;
+  margin-bottom: 50px;
+}
+
+#activity-container {
+  float: left;
+}
+
+.activity-colored-div {
+  width: 15vw;
+  padding: 0;
+}
+
+#activity-div {
+  border-radius: 15px;
+  margin: 0;
+  padding: 23px;
+}
+
+.activity-icon-div {
+  overflow: hidden;
+  height: 30px;
+}
+
+#work-icon, #play-icon, #study-icon, #exercise-icon {
+  width: 50px;
+  margin: -5px 0 0 0;
+  float: right;
+  padding-right: 23px;
+}
+
+#social-icon {
+  width: 60px;
+  margin: -8px 0 0 0;
+  float: right;
+  padding-right: 23px;
+}
+
+#self-care-icon {
+  width: 40px;
+  margin: -3px 0 0 0;
+  float: right;
+  padding-right: 23px;
+}
+
+/*# sourceMappingURL=styles.css.map */

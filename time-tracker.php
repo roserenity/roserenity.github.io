@@ -7,19 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    
+<?php include "script.js" ?>
     <div id = "time-tracker-container">
         <div id="user-div" class="in-dark-blue">
             <div id="user-info-div">
                 <img src="images/image-jeremy.png" width="80vw">
                 <div>
                     <div class=".in-dark-blue font-small">Report for</div>
-                    <span id="name">Jeremy Robson</span>
+                    <span class="font-big">Jeremy Robson</span>
                 </div>
             </div>
             <div id="period-nav-div">
-                <div class="period font-small"><a>Daily</a></div>
-                <div class="period font-small"><a>Weekly</a></div>
-                <div class="period font-small"><a>Monthly</a></div>
+                <div class="period font-small">
+                    <label>
+                        <input type="radio" id="daily" name = "period" onclick="getperiod('daily')"/>
+                        <span>Daily</span>
+                    </label>
+                </div>
+                <div class="period font-small">
+                    <label>
+                        <input type="radio" id="weekly" name = "period" onclick="getperiod('weekly')" checked/>
+                        <span>Weekly</span>
+                    </label>
+                </div>
+                <div class="period font-small">
+                    <label>
+                        <input type="radio" id="monthly"name = "period" onclick="getperiod('monthly')"/>
+                        <span>Monthly</span>
+                    </label>
+                </div>
             </div>
         </div>
         <div id="activity-container">
@@ -32,9 +49,17 @@
                         <div class="activity-icon-div">
                             <img id="'.$title_lower.'-icon"" src="images/icon-'.$title_lower.'.svg">
                         </div>
-                        <div id="activity-div" class="in-dark-blue">
-                        
-                        '.$activity['title'].'</div></div>';
+                        <div class="activity-div in-dark-blue">
+                            <div class="activity-div-top font-small">
+                                <div class="activity-title">'.$activity['title'].'</div> 
+                                <div class="ellipsis"><img src="images/icon-ellipsis.svg"></div>
+                            </div>
+                            <div class="hour-div">
+                                <div id="'.$title_lower.'-current" class="current-hours-div font-big"></div>
+                                <div id="'.$title_lower.'-previous" class="previous-hours-div font-small"></div>
+                            </div>
+                        </div>
+                    </div>';
                 }
             ?>
         </div>

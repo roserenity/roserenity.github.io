@@ -3,7 +3,7 @@ $blue: hsl(246, 80%, 60%);
 $very-dark-blue: hsl(226, 43%, 10%);
 $padding-: 15%;
 $dark-blue: hsl(235, 46%, 20%);
-$desaturated-blue: hsl(235, 45%, 61%);
+$desaturated-blue: hsl(235, 45%, 31%);
 $pale-blue: hsl(236, 100%, 87%);
 
 $colors: (
@@ -30,52 +30,52 @@ $colors: (
 
 @mixin medias-div{
     @media screen and (max-width: 320px){
-        #user-div {
+        #user-div, .activity-colored-div, #activity-container {
             width: 70vw;
-            margin: auto;
+            margin-bottom: 5vh
         }
         #user-info-div, #period-nav-div {
             @include flex-div
         }
-        img {
-            width: 15vw;
+        #user-info-div > img {
+            width: 13vw;
             margin: 0;
         }
         .font-small{
-            font-size: 10px;
+            font-size: 9px;
         }
-        #name {
-            font-size: 13px;
+        .font-big {
+            font-size: 11px;
         }
     }
     @media screen and (max-width: 375px) and (min-width: 330px) {
-        #user-div {
+        #user-div, .activity-colored-div, #activity-container {
             width: 74vw;
-            margin: auto;
+            margin-bottom: 5vh
         }
         #user-info-div, #period-nav-div {
             @include flex-div
         }
-        img {
+        #user-info-div > img {
             width: 13vw;
             margin: 0;
         }
         .font-small{
             font-size: 13px
         }
-        #name {
+        .font-big {
             font-size: 18px
         }
     }
     @media screen and (max-width: 425px) and (min-width: 380px) {
-        #user-div{
+        #user-div, .activity-colored-div, #activity-container{
             width: 75vw;
-            margin: auto;
+            margin-bottom: 5vh
         }
         #user-info-div, #period-nav-div {
             @include flex-div
         }
-        img {
+        #user-info-div > img {
             width: 18vw;
             margin: 0;
         }
@@ -85,14 +85,14 @@ $colors: (
         .font-small {
             font-size: 13px
         }
-        #name {
+        .font-big {
             font-size: 18px
         }
     }
     @media screen and (max-width: 768px) and (min-width: 430px) {
-        #user-div{
+        #user-div, .activity-colored-div, #activity-container{
             width: 50vw;
-            margin: auto
+            margin-bottom: 5vh
         }
         #user-info-div, #period-nav-div {
             @include flex-div
@@ -100,27 +100,33 @@ $colors: (
         .period {
             margin-top: 0;
         }
-        img {
+        #user-info-div > img {
             width: 10vw;
             border-radius: 70px;
-            margin: 0
+            margin-bottom: 0;
         }
         .font-small {
             font-size: 15px
         }
-        #name{
+        .font-big{
             font-size: 25px
         }
     }
     @media screen and (max-width: 1024px ) and (min-width: 778px) {
-        img {
-            width: 5vw;
+        #activity-container {
+            width:58vw;
+        }
+        .activity-colored-div, #user-div {
+            width: 18vw;
+        }
+        #user-info-div > img {
+            width: 8vw;
             border-radius: 60px;
         }
         .font-small {
             font-size: 10px
         }
-        #name {
+        .font-big {
             font-size: 20px;
         }
     }
@@ -148,18 +154,17 @@ body {
     margin: 0;
     padding: 23px;
 }
-#name {
-    font-size: 30px;
+.font-big {
+    font-size: 28px;
 }
 .in-dark-blue {
     background-color: $dark-blue;
 }
 #user-div {
-    color: $desaturated-blue;
+    color: $pale-blue;
     width: 15vw;
     border-radius: 15px;
-    margin: 0;
-    padding-bottom: 10px;
+    margin: 1vw;
 }
 #period-nav-div{
     padding-left: 23px;
@@ -169,25 +174,45 @@ body {
 .period {
     padding-bottom: 15px;
 }
+.period:hover, label > input[type='radio']:checked + *{
+    color: white;
+    cursor: pointer;
+}
+label > input[type="radio"] {
+  display: none;
+}
 #user-info-div > img {
     border: 3px solid white;
     border-radius: 50px;
     margin-bottom: 10%;
-    margin-bottom: 50px;
+}
+#time-tracker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #activity-container {
-    float: left;
+    width:50vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 1vw;
 }
 .activity-colored-div {
     width: 15vw;
     padding: 0;
 }
-#activity-div {
+.activity-div {
     border-radius: 15px;
     margin: 0;
     padding: 23px;
 }
-.activity-icon-div{
+.activity-div:hover {
+    background-color: $desaturated-blue;
+    cursor: pointer;
+}
+.activity-icon-div {
     overflow:hidden;
     height: 30px
 }
@@ -197,17 +222,33 @@ body {
     float: right;
     padding-right: 23px;
 }
-
 #social-icon {
     width: 60px;
     margin: -8px 0 0 0;
     float: right;
     padding-right: 23px;
 }
-
 #self-care-icon {
     width: 40px;
     margin: -3px 0 0 0;
     float: right;
     padding-right: 23px;
+}
+.activity-div-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.activity-title, .current-hours-div {
+    color: white;
+    font-weight: 300;
+}
+.current-hours-div {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.previous-hours-div {
+    color: $pale-blue
 }

@@ -30,7 +30,7 @@ function show_activity_container() {
         activity_icon_div.setAttribute('class',"activity-icon-div ")
         activity_colored_div.appendChild(activity_icon_div)
         let activity_icon = document.createElement('img')
-        activity_icon.id = act+"icon"
+        activity_icon.id = act+"-icon"
         activity_icon.src = "images/icon-"+act+".svg"
         activity_icon_div.appendChild(activity_icon)
         let activity_div = document.createElement('div')

@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+$blue: hsl(246, 80%, 60%);
+$very-dark-blue: hsl(226, 43%, 10%);
+$padding-: 15%;
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 31%);
+$pale-blue: hsl(236, 100%, 87%);
+
+$colors: (
+    "work-color": hsl(15, 100%, 70%),
+    "play-color": hsl(195, 74%, 62%),
+    "study-color": hsl(348, 100%, 68%),
+    "exercise-color": hsl(145, 58%, 55%),
+    "social-color": hsl(264, 64%, 52%),
+    "self-care-color": hsl(43, 84%, 65%)
+);
+@each $activity-color, $color in $colors {
+    .#{$activity-color} {
+        background: $color;
+        border-radius: 15px;
+    }
+}
+
+@mixin flex-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around
+}
+
+@mixin medias-div{
+    @media screen and (max-width: 320px){
+        #user-div, .activity-colored-div, #activity-container {
+            width: 70vw;
+            margin-bottom: 5vh
+        }
+        #user-info-div, #period-nav-div {
+            @include flex-div
+        }
+        #user-info-div > img {
+            width: 13vw;
+            margin: 0;
+        }
+        .font-small{
+            font-size: 9px;
+        }
+        .font-big {
+            font-size: 11px;
+        }
+    }
+    @media screen and (max-width: 375px) and (min-width: 330px) {
+        #user-div, .activity-colored-div, #activity-container {
+            width: 74vw;
+            margin-bottom: 5vh
+        }
+        #user-info-div, #period-nav-div {
+            @include flex-div
+        }
+        #user-info-div > img {
+            width: 13vw;
+            margin: 0;
+        }
+        .font-small{
+            font-size: 13px
+        }
+        .font-big {
+            font-size: 18px
+        }
+    }
+    @media screen and (max-width: 425px) and (min-width: 380px) {
+        #user-div, .activity-colored-div, #activity-container{
+            width: 75vw;
+            margin-bottom: 5vh
+        }
+        #user-info-div, #period-nav-div {
+            @include flex-div
+        }
+        #user-info-div > img {
+            width: 18vw;
+            margin: 0;
+        }
+        .period {
+            margin: 0;
+        }
+        .font-small {
+            font-size: 13px
+        }
+        .font-big {
+            font-size: 18px
+        }
+    }
+    @media screen and (max-width: 768px) and (min-width: 430px) {
+        #user-div, .activity-colored-div, #activity-container{
+            width: 50vw;
+            margin-bottom: 5vh
+        }
+        #user-info-div, #period-nav-div {
+            @include flex-div
+        }
+        .period {
+            margin-top: 0;
+        }
+        #user-info-div > img {
+            width: 10vw;
+            border-radius: 70px;
+            margin-bottom: 0;
+        }
+        .font-small {
+            font-size: 15px
+        }
+        .font-big{
+            font-size: 25px
+        }
+    }
+    @media screen and (max-width: 1024px ) and (min-width: 778px) {
+        #activity-container {
+            width:58vw;
+        }
+        .activity-colored-div, #user-div {
+            width: 18vw;
+        }
+        #user-info-div > img {
+            width: 8vw;
+            border-radius: 60px;
+        }
+        .font-small {
+            font-size: 10px
+        }
+        .font-big {
+            font-size: 20px;
+        }
+    }
+    @media screen and (max-width: 2560px ) and (min-width: 1040px) {
+        #activity-container {
+            width:60vw;
+        }
+        .activity-colored-div, #user-div {
+            width: 18vw;
+        }
+        #user-info-div > img {
+            width: 6vw;
+            border-radius: 80vw;
+        }
+        .font-small {
+            font-size: 2vh
+        }
+        .font-big {
+            font-size: 5vh;
+        }
+    }
+    @media screen and (min-width: 2565px) {
+        #activity-container {
+            width:60vw;
+        }
+        .activity-colored-div, #user-div {
+            width: 18vw;
+        }
+        #user-info-div > img {
+            width: 5vw;
+            border-radius: 80vw;
+        }
+        .font-small {
+            font-size: 2vh
+        }
+        .font-big {
+            font-size: 4vh;
+        }
+    }
+
+}
+
+.font-small {
+    font-size: 12px;
+}
+
+body {
+    background: $very-dark-blue;
+    font-family: 'Rubik', sans-serif;
+    padding: 5%;
+    @media screen and (max-width: 405px){
+        padding: 3%;
+    }
+    @include medias-div;
+}
+#user-info-div{
+    background-color: $blue;
+    color: white;
+    font-weight: 300;
+    border-radius: 15px;
+    margin: 0;
+    padding: 23px;
+}
+.font-big {
+    font-size: 28px;
+}
+.in-dark-blue {
+    background-color: $dark-blue;
+}
+#user-div {
+    color: $pale-blue;
+    width: 15vw;
+    border-radius: 15px;
+    margin: 1vw;
+}
+#period-nav-div{
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 23px;
+}
+.period {
+    padding-bottom: 15px;
+}
+.period:hover, label > input[type='radio']:checked + *{
+    color: white;
+    cursor: pointer;
+}
+label > input[type="radio"] {
+  display: none;
+}
+#user-info-div > img {
+    border: 3px solid white;
+    border-radius: 50px;
+    margin-bottom: 10%;
+}
+#time-tracker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#activity-container {
+    width:50vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 1vw;
+}
+.activity-colored-div {
+    width: 15vw;
+    padding: 0;
+}
+.activity-div {
+    border-radius: 15px;
+    margin: 0;
+    padding: 23px;
+}
+.activity-div:hover {
+    background-color: $desaturated-blue;
+    cursor: pointer;
+}
+.activity-icon-div {
+    overflow:hidden;
+    height: 30px
+}
+#work-icon, #play-icon, #study-icon, #exercise-icon{
+    width: 50px;
+    margin: -5px 0 0 0;
+    float: right;
+    padding-right: 23px;
+}
+#social-icon {
+    width: 60px;
+    margin: -8px 0 0 0;
+    float: right;
+    padding-right: 23px;
+}
+#self-care-icon {
+    width: 40px;
+    margin: -3px 0 0 0;
+    float: right;
+    padding-right: 23px;
+}
+.activity-div-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.activity-title, .current-hours-div {
+    color: white;
+    font-weight: 300;
+}
+.current-hours-div {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.previous-hours-div {
+    color: $pale-blue
+}

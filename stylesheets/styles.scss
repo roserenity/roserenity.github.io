@@ -130,7 +130,25 @@ $colors: (
             font-size: 20px;
         }
     }
-    @media screen and (min-width: 1040px) {
+    @media screen and (max-width: 2560px ) and (min-width: 1040px) {
+        #activity-container {
+            width:60vw;
+        }
+        .activity-colored-div, #user-div {
+            width: 18vw;
+        }
+        #user-info-div > img {
+            width: 6vw;
+            border-radius: 80vw;
+        }
+        .font-small {
+            font-size: 2vh
+        }
+        .font-big {
+            font-size: 5vh;
+        }
+    }
+    @media screen and (min-width: 2565px) {
         #activity-container {
             width:60vw;
         }

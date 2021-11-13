@@ -42,16 +42,16 @@ body {
         @include media-query (70vw, 5vw, 3vw, 3vw)
     }
     @media screen and (max-width: 375px) and (min-width: 340px){
-        @include media-query (80vw, 6vw, 4vw, 5vw)
+        @include media-query (80vw, 6vw, 3.5vw, 5vw)
     }
     @media screen and (max-width: 425px) and (min-width: 380px){
         @include media-query (80vw, 6vw, 3vw, 6vw)
     }
     @media screen and (max-width: 768px) and (min-width: 430px){
-        @include media-query (40vw, 3vw, 2vw, 3vw)
+        @include media-query (70vw, 3vw, 2vw, 5vw)
     }
     @media screen and (max-width: 1024px) and (min-width: 770px){
-        @include media-query (28vw, 2vw, 1vw, 3.5vw)
+        @include media-query (70vw, 5vw, 2vw, 5vw)
     }
 }
 

@@ -32,7 +32,7 @@ body {
     font-size: 6vw;
   }
   body .body {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   body #order-summary-content {
     padding: 5vw;
@@ -54,7 +54,7 @@ body {
 }
 @media screen and (max-width: 768px) and (min-width: 430px) {
   body #order-summary-div {
-    width: 40vw;
+    width: 70vw;
   }
   body #order-summary-title {
     font-size: 3vw;
@@ -63,21 +63,21 @@ body {
     font-size: 2vw;
   }
   body #order-summary-content {
-    padding: 3vw;
+    padding: 5vw;
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 770px) {
   body #order-summary-div {
-    width: 28vw;
+    width: 70vw;
   }
   body #order-summary-title {
-    font-size: 2vw;
+    font-size: 5vw;
   }
   body .body {
-    font-size: 1vw;
+    font-size: 2vw;
   }
   body #order-summary-content {
-    padding: 3.5vw;
+    padding: 5vw;
   }
 }
 

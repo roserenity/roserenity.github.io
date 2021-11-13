@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="order-summary-div">
+      <img src="images/illustration-hero.svg" alt="person listening to music" width="100%">
+      <div id="order-summary-content">
+        <div id="order-summary-title" class="bold dark-blue-font text-center"> 
+          Order Summary
+        </div>
+
+        <div class="body desaturated-blue-font margin-2vh text-center">
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!
+        </div>
+
+        <div id="plan-div" class="flex padding-2vh margin-2vh padding-3vh">
+          <div class="flex">
+            <div>
+              <img src="images/icon-music.svg" alt="icon music" width="80%">
+            </div>
+            <div>
+              <div class="bold body dark-blue-font">Annual Plan</div>
+              <div class="body desaturated-blue-font">$59.99/year</div>
+            </div>
+          </div>
+          <div class="bold body dark-blue-font">
+            <a href="#" id="btn-change">Change</a>
+          </div>
+        </div>
+
+        <div id="proceed-to-payment-div">
+          <input type="button" id="btn-proceed-to-payment" class="body margin-1vh padding-2vh" value="Proceed to Payment"/>
+        </div>
+        <input type="button" id="btn-cancel-order" class="bold body dark-blue-font padding-2vh" value="Cancel Order"/>
+      </div>  
+    </div>
+
+  </div>
+</body>
+</html>

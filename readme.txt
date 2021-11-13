@@ -1,3 +1,4 @@
-This is a repository for a Time Tracker Dashboard Web Page.
+Challenges on Frontend Mentor
 
-- refreshing web design knowledge, please mind your words as this developer has a soft heart. thank you.
+11/13 - Time Tracker Dashboard: https://roserenity.github.io/Time-Tracker-Dashboard/index.html
+11/14 - Order Summary Component:

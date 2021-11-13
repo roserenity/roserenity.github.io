@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+//colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$blue-violet: rgb(118, 108, 241);
+
+@mixin hover-prop($property, $color){
+    cursor: pointer;
+    #{$property}: $color;
+}
+@mixin media-query($osd-width, $osd-fs, $body-fs, $osd-pd){
+    #order-summary-div{
+        width: $osd-width;
+    }
+    #order-summary-title {
+        font-size: $osd-fs;
+    }
+    .body {
+        font-size: $body-fs;
+    }
+    #order-summary-content {
+        padding: $osd-pd;
+    }
+    
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    margin: 0%;
+    background-color: hsl(225, 100%, 94%);
+
+    @media screen and (max-width: 320px){
+        @include media-query (70vw, 5vw, 3vw, 3vw)
+    }
+    @media screen and (max-width: 375px) and (min-width: 340px){
+        @include media-query (80vw, 6vw, 4vw, 5vw)
+    }
+    @media screen and (max-width: 425px) and (min-width: 380px){
+        @include media-query (80vw, 6vw, 3vw, 6vw)
+    }
+    @media screen and (max-width: 768px) and (min-width: 430px){
+        @include media-query (40vw, 3vw, 2vw, 3vw)
+    }
+    @media screen and (max-width: 1024px) and (min-width: 770px){
+        @include media-query (28vw, 2vw, 1vw, 3.5vw)
+    }
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#order-summary-div {
+    width: 23vw;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 20px rgb(198, 207, 246)
+}
+
+.bold {
+    font-weight: 900;
+}
+.dark-blue-font {
+    color: $dark-blue
+}
+#order-summary-title {
+    font-size: 1.5vw;
+}
+#order-summary-content {
+    padding: 2vw;
+}
+.body {
+    font-size: 1vw
+}
+.desaturated-blue-font {
+    color: $desaturated-blue;
+}
+.text-center {
+    text-align: center;
+}
+.margin-1vh {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.margin-2vh {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.padding-2vh {
+    padding: 2vh;
+}
+.padding-3vh {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+#plan-div {
+    justify-content: space-between;
+    background-color: $very-pale-blue;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+input[type="button"] {
+    width: 100%
+}
+#proceed-to-payment-div{
+    background-color: transparent;
+    box-shadow: 0 20px 20px rgb(198, 207, 246);
+    border-radius: 13px;
+    overflow: hidden;
+}
+#btn-proceed-to-payment {
+    margin: 0;
+    background-color: $bright-blue;
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-family: 'Red Hat Display', sans-serif;
+}
+#btn-change {
+    font-weight: 600;
+}
+#btn-change:hover{
+    @include hover-prop("color", $blue-violet);
+    text-decoration: none;
+}
+#btn-proceed-to-payment:hover {
+    @include hover-prop("background-color",$blue-violet);
+}
+#btn-cancel-order {
+    background-color: transparent;
+    border: none;
+    font-family: 'Red Hat Display', sans-serif;
+    color: $desaturated-blue;
+}
+#btn-cancel-order:hover {
+    @include hover-prop("color",$dark-blue);
+}

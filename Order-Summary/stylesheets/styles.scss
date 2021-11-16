@@ -29,14 +29,11 @@ $blue-violet: rgb(118, 108, 241);
 }
 body {
     font-family: 'Red Hat Display', sans-serif;
-    background-image: url("images/pattern-background-desktop.svg");
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    width: 100vw;
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-position: top;
     background-repeat: no-repeat;
     margin: 0%;
-    background-color: hsl(225, 100%, 94%);
+    background-color: rgb(224, 232, 255);
 
     @media screen and (max-width: 320px){
         @include media-query (70vw, 5vw, 3vw, 3vw)
@@ -48,10 +45,10 @@ body {
         @include media-query (80vw, 6vw, 3vw, 6vw)
     }
     @media screen and (max-width: 768px) and (min-width: 430px){
-        @include media-query (70vw, 3vw, 2vw, 5vw)
+        @include media-query (40vw, 3vw, 2vw, 5vw)
     }
     @media screen and (max-width: 1024px) and (min-width: 770px){
-        @include media-query (70vw, 5vw, 2vw, 5vw)
+        @include media-query (30vw, 3vw, 1vw, 3vw)
     }
 }
 

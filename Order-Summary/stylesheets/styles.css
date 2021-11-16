@@ -20,6 +20,9 @@ body {
   body #order-summary-content {
     padding: 3vw;
   }
+  body body {
+    background-image: url("../images/pattern-background-mobile.svg");
+  }
 }
 @media screen and (max-width: 375px) and (min-width: 340px) {
   body #order-summary-div {
@@ -33,6 +36,9 @@ body {
   }
   body #order-summary-content {
     padding: 5vw;
+  }
+  body body {
+    background-image: url("../images/pattern-background-mobile.svg");
   }
 }
 @media screen and (max-width: 425px) and (min-width: 380px) {
@@ -48,6 +54,9 @@ body {
   body #order-summary-content {
     padding: 6vw;
   }
+  body body {
+    background-image: url("../images/pattern-background-mobile.svg");
+  }
 }
 @media screen and (max-width: 768px) and (min-width: 430px) {
   body #order-summary-div {
@@ -61,6 +70,9 @@ body {
   }
   body #order-summary-content {
     padding: 5vw;
+  }
+  body body {
+    background-image: url("../images/pattern-background-mobile.svg");
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 770px) {

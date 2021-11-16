@@ -25,7 +25,11 @@ $blue-violet: rgb(118, 108, 241);
     #order-summary-content {
         padding: $osd-pd;
     }
-    
+}
+@mixin mobile-bg {
+    body {
+        background-image: url("../images/pattern-background-mobile.svg");
+    }
 }
 body {
     font-family: 'Red Hat Display', sans-serif;
@@ -36,16 +40,20 @@ body {
     background-color: rgb(224, 232, 255);
 
     @media screen and (max-width: 320px){
-        @include media-query (70vw, 5vw, 3vw, 3vw)
+        @include media-query (70vw, 5vw, 3vw, 3vw);
+        @include mobile-bg;
     }
     @media screen and (max-width: 375px) and (min-width: 340px){
-        @include media-query (80vw, 6vw, 3.5vw, 5vw)
+        @include media-query (80vw, 6vw, 3.5vw, 5vw);
+        @include mobile-bg;
     }
     @media screen and (max-width: 425px) and (min-width: 380px){
-        @include media-query (80vw, 6vw, 3vw, 6vw)
+        @include media-query (80vw, 6vw, 3vw, 6vw);
+        @include mobile-bg;
     }
     @media screen and (max-width: 768px) and (min-width: 430px){
-        @include media-query (40vw, 3vw, 2vw, 5vw)
+        @include media-query (40vw, 3vw, 2vw, 5vw);
+        @include mobile-bg;
     }
     @media screen and (max-width: 1024px) and (min-width: 770px){
         @include media-query (30vw, 3vw, 1vw, 3vw)

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+<body>
+  <div class="card">
+    <img id="image-header" class="card-img" src="images/desktop/image-header.jpg" alt="sliced orange">
+    <div class="card-img-overlay header-overlay">
+      <div id="header">
+        <div id="header-title" class="font-barlow heading-1 white padding-1">
+          sunnyside
+        </div>
+        <div id="hamburger-menu">
+          <a href="javascript:open_menu()"><img src="./images/icon-hamburger.svg" alt="hamburger icon"></a>
+        </div>
+        <div id="header-nav" class="padding-1">
+            <svg id="modal_triangle" height="50" width="50" >
+              <polygon points="50,0 0,50 50,50" style="fill:white;stroke:white;" />
+            </svg>
+          <div id="header-nav-content">
+            <div id="nav" class="nav font-barlow white">
+              About
+            </div>
+            <div id="nav" class="nav font-barlow white">
+              Services
+            </div>
+            <div id="nav" class="nav font-barlow white">
+              Projects
+            </div>
+            <a href="#" id="contact-btn" class="nav font-fraunces heading-3">
+              CONTACT
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="font-fraunces white spacing text-center heading padding-0">
+        WE ARE CREATIVES
+      </div>
+      <div class="text-center padding-0">
+        <img id="arrow" src="./images/icon-arrow-down.svg" alt="arrow down">
+      </div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="article-div center reverse2">
+      <span class="heading-1 font-fraunces very-dark-desaturated-blue">
+        Transform your brand
+      </span>
+      <article class="dark-grayish-blue padding-1">
+        We are a full-service creative agency specializing in helping brands grow fast. 
+        Engage your clients through compelling visuals that do most of the marketing for you.
+      </article>
+      <div id="yellow-learn" class="font-fraunces _900">
+        LEARN MORE
+      </div>
+    </div>
+    <div class=" reverse1">
+      <img id="image-transform" src="images/desktop/image-transform.jpg" alt="egg">
+    </div>
+  </div>
+  <div class="grid-2">
+    <div>
+      <img id="image-stand-out" src="images/desktop/image-stand-out.jpg" alt="wine glass">
+    </div>
+    <div class="article-div center">
+      <span class="heading-1 font-fraunces very-dark-desaturated-blue">
+        Stand out to the right audience
+      </span>
+      <article class="dark-grayish-blue padding-1">
+        Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+      </article>
+      <div id="soft-red-learn" class="font-fraunces _900">
+          LEARN MORE
+      </div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-img-overlay overlay-bottom center">
+        <div class="bottom-div padding-1">
+          <span class="heading-2 font-fraunces dark-desaturate-cyan">
+            Graphic design
+          </span>
+          <article class="dark-desaturate-cyan padding-1">
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+          </article>
+        </div>
+      </div>
+      <img id="image-graphic-design" class="card-img" src="images/desktop/image-graphic-design.jpg" alt="cherry">  
+    </div>
+    <div class="card">
+      <div class="card-img-overlay overlay-bottom center">
+        <div class="bottom-div padding-1">
+          <span class="heading-2 font-fraunces dark-blue">
+            Photography
+          </span>
+          <article class="dark-blue padding-1">
+            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+          </article>
+        </div>
+      </div>
+      <img id="image-photography" class="card-img" src="images/desktop/image-photography.jpg" alt="orange">
+    </div>
+  </div>
+  <div id="client-testimonials-div">
+    <div class="font-fraunces grayish-blue spacing text-center heading-3 padding-1">
+      CLIENT TESTIMONIALS
+    </div>
+    <div class="card-group">
+      <div class="card client-card padding-1">
+        <img class="card-img client-img mx-auto padding-1" src="images/image-emily.jpg" alt="Client Emily R.">
+        <div class="card-text text-center font-barlow very-dark-grayish-blue padding-1">
+          We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+        </div>
+        <div class="card-footer line-height text-center padding-1">
+          <div class="font-fraunces _900">
+            Emily R.
+          </div>
+          <div class="grayish-blue font-barlow ">
+            Marketing Director
+          </div>
+        </div>
+      </div>
+      <div class="card client-card padding-1">
+        <img class="card-img client-img mx-auto padding-1" src="images/image-thomas.jpg" alt="Client Thomas S.">
+        <div class="card-text text-center font-barlow very-dark-grayish-blue padding-1">
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+        </div>
+        <div class="card-footer line-height text-center padding-1">
+          <div class="font-fraunces _900">
+            Thomas S.
+          </div>
+          <div class="grayish-blue font-barlow _500">
+            Chief Operating Officer
+          </div>
+        </div>
+      </div>
+      <div class="card client-card padding-1">
+        <img class="card-img client-img mx-auto padding-1" src="images/image-jennie.jpg" alt="Client Jennie F."> 
+        <div class="card-text text-center font-barlow very-dark-grayish-blue padding-1">
+          Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+        </div>
+        <div class="card-footer line-height text-center padding-1">
+          <div class="font-fraunces _900">
+            Jennie F.
+          </div>
+          <div class="grayish-blue font-barlow ">
+            Business Owner
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="grid-4">
+      <div>
+        <img id="image-gallery-milkbottles" src="images/desktop/image-gallery-milkbottles.jpg" alt="milk bottles">
+      </div>
+      <div>
+        <img id="image-gallery-orange" src="images/desktop/image-gallery-orange.jpg" alt="orange">
+      </div>
+      <div>
+        <img id="image-gallery-cone" src="images/desktop/image-gallery-cone.jpg" alt="cone">
+      </div>
+      <div>
+        <img id="image-gallery-sugar-cubes" src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugarcubes">
+      </div>
+    </div>
+  </div>
+  <footer class="text-center dark-moderate-cyan">
+    <div class="font-barlow heading-2 padding-1">
+      sunnyside
+    </div>
+    <div class="footer-nav">
+      <a href="#" class="nav font-barlow dark-moderate-cyan">
+        About
+      </a>
+      <a href="#" class="nav font-barlow dark-moderate-cyan">
+        Services
+      </a>
+      <a href="#" class="nav font-barlow dark-moderate-cyan">
+        Projects
+      </a>
+    </div>
+    <div class="footer-nav padding-0">
+      <a href="#"  class="nav icon">
+        <img src="images/icon-facebook.svg" alt="facebook icon">
+      </a>
+      <a href="#"  class="nav icon">
+        <img src="images/icon-instagram.svg" alt="instagram icon">
+      </a>
+      <a href="#"  class="nav icon">
+        <img src="images/icon-twitter.svg" alt="twitter icon">
+      </a>
+      <a href="#"  class="nav icon">
+        <img src="images/icon-pinterest.svg" alt="pinterest icon">
+      </a>
+    </div>
+  </footer>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  
+  <script>
+    function open_menu() {
+      var header_nav = document.getElementById("header-nav");
+      var modal_triangle = document.getElementById("modal_triangle");
+      var header_nav_content = document.getElementById("header-nav-content");
+      if (header_nav.style.visibility == "visible"){
+        header_nav_content.classList.remove("header-modal-content");
+        header_nav.classList.remove("header-modal");
+        header_nav.style.visibility = "hidden";
+        header_nav.style.display = "none";
+        modal_triangle.style.visibility = "hidden";
+        modal_triangle.style.display = "none";
+      } else {
+        header_nav_content.classList.add("header-modal-content");
+        header_nav.classList.add("header-modal");
+        header_nav.style.visibility = "visible";
+        header_nav.style.display = "block";
+        modal_triangle.style.visibility = "visible";
+        modal_triangle.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
